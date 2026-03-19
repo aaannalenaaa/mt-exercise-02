@@ -11,12 +11,14 @@ samples=$base/samples
 mkdir -p $samples
 
 num_threads=4
-device=""
+device="mps"
 
 (cd $tools/pytorch-examples/word_language_model &&
-    CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python generate.py \
-        --data $data/grimm \
+    OMP_NUM_THREADS=$num_threads /Users/annalena/university/masters/26FS/machine_translation/mt-exercise-02/venvs/torch3/bin/python3 generate.py \
+        --accel \
+        --data $base/test_train_validate_data \
         --words 100 \
+        --temperature 1 \
+        --outf $samples/sample_submission \
         --checkpoint $models/model.pt \
-        --outf $samples/sample
 )
