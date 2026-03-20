@@ -2,6 +2,7 @@
 
 scripts=$(dirname "$0")
 base=$(realpath $scripts/..)
+PYTHON=$base/venvs/torch3/bin/python3
 
 models=$base/models
 data=$base/data
@@ -15,7 +16,7 @@ device="mps"
 SECONDS=0
 
 (cd $tools/pytorch-examples/word_language_model &&
-    OMP_NUM_THREADS=$num_threads /Users/annalena/university/masters/26FS/machine_translation/mt-exercise-02/venvs/torch3/bin/python3 main.py --data $base/test_train_validate_data \
+    OMP_NUM_THREADS=$num_threads $PYTHON main.py --data $base/test_train_validate_data \
 --accel \
 --epochs 40 \
 --log-interval 100 \
