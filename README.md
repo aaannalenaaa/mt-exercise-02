@@ -27,9 +27,16 @@ Download and install required software:
 
     ./scripts/install_packages.sh
 
-Download and preprocess data:
+~Download and preprocess data:~
 
-    ./scripts/download_data.sh
+<mark>Create your training data:</mark>
+
+Select your own data and preprocess it. After adapting the necessary paths, you can use the following script:
+
+    ./scripts/preprocess.sh
+
+Alternatively you can use the already preprocessed and cleaned data found in `./preprocessed` and `./cleaned_data` respectively. This data consists of 26 scripts from the TV show friends.
+
 
 Train a model:
 
