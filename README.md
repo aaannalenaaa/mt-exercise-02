@@ -33,3 +33,17 @@ Train a model on the just created data:
 Generate (sample) some text from a trained model with:
 
     ./scripts/generate.sh
+
+
+To train several models with different dropout rates, please adjust the dropout rates and use:
+
+    ./scripts/batch_train.sh
+
+This will automatically log the different perplexities into individual .csv-files.
+All of them can be combined into one large .csv file using:
+
+    ./scripts/combining_csv.py
+
+Further, feel free to plot your results using or check out the exisitng ones:
+
+    ./mt-exercise-02/scripts/log_plotting.ipynb
