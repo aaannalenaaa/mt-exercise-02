@@ -4,48 +4,32 @@ This repo shows how to train neural language models using [Pytorch example code]
 
 # Requirements
 
-- This only works on a Unix-like system, with bash.
-- Python 3 must be installed on your system, i.e. the command `python3` must be available
-- Make sure virtualenv is installed on your system. To install, e.g.
+- This code was adjusted to work on Mac, changing devide to "mps"
+- preprocess.py was changed from 
+        t = tokenizer.tokenize(line)
+    to
+        t = tokenizer.tokenize(line, escape=False)
+    in order to avoid & being turned into &amp;
+- direct paths to the used python were included (to avoid errors, eg. line 18 in ./scripts/train.sh)
 
-    `pip install virtualenv`
+
 
 # Steps
 
-Clone this repository in the desired place:
+Start off by selecting the data.
+The data used in this are 26 episode scripts from Friends. Download the .txt files here https://www.kaggle.com/datasets/divyansh22/friends-tv-show-script. 
+Select the desired episodes in ./scripts/preprocess.sh (or leave as is).
 
-    git clone https://github.com/marcamsler1/mt-exercise-02
-    cd mt-exercise-02
-
-Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
-
-    ./scripts/make_virtualenv.sh
-
-**Important**: Then activate the env by executing the `source` command that is output by the shell script above.
-
-Download and install required software:
-
-    ./scripts/install_packages.sh
-
-~Download and preprocess data:~
-
-<mark>Create your training data:</mark>
-
-Select your own data and preprocess it. After adapting the necessary paths, you can use the following script:
+After adapting the necessary paths, you can run the following script:
 
     ./scripts/preprocess.sh
 
-Alternatively you can use the already preprocessed and cleaned data found in `./preprocessed` and `./cleaned_data` respectively. This data consists of 26 scripts from the TV show friends.
 
-
-Train a model:
+Train a model on the just created data:
 
     ./scripts/train.sh
 
-The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
 Generate (sample) some text from a trained model with:
 
     ./scripts/generate.sh
-
-

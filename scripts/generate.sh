@@ -19,6 +19,6 @@ device="mps"
         --data $base/test_train_validate_data \
         --words 100 \
         --temperature 1 \
-        --outf $samples/sample_submission \
-        --checkpoint $models/model.pt \
+        --outf $samples/sample_submission_d07 \
+        --checkpoint $models/model_d07.pt \
 )
