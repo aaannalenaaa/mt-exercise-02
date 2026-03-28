@@ -17,7 +17,7 @@ This repo shows how to train neural language models using [Pytorch example code]
 # Steps
 
 Start off by selecting the data.
-The data used in this are 26 episode scripts from Friends. Download the .txt files here https://www.kaggle.com/datasets/divyansh22/friends-tv-show-script. 
+The data used in this are 26 episode scripts from Friends. Download the .txt files here https://www.kaggle.com/datasets/blessondensil294/friends-tv-series-screenplay-script. 
 Select the desired episodes in ./scripts/preprocess.sh (or leave as is).
 
 After adapting the necessary paths, you can run the following script:
