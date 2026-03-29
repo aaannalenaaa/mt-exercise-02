@@ -4,23 +4,21 @@ This repo shows how to train neural language models using [Pytorch example code]
 
 # Requirements
 
-- This code was adjusted to work on Mac, changing devide to "mps"
+- the code was adjusted to work on Mac, changing devide to "mps"
+- the -accel flag was used, to speed up training
 - preprocess.py was changed from 
         t = tokenizer.tokenize(line)
     to
         t = tokenizer.tokenize(line, escape=False)
     in order to avoid & being turned into &amp;
-- direct paths to the used python were included (to avoid errors, eg. line 18 in ./scripts/train.sh)
-
-
 
 # Steps
 
 Start off by selecting the data.
-The data used in this are 26 episode scripts from Friends. Download the .txt files here https://www.kaggle.com/datasets/blessondensil294/friends-tv-series-screenplay-script. 
+The data used in this submission are 26 episode scripts from Friends. Download the .txt files here: https://www.kaggle.com/datasets/blessondensil294/friends-tv-series-screenplay-script. Some files have been renamed.
 Select the desired episodes in ./scripts/preprocess.sh (or leave as is).
 
-After adapting the necessary paths, you can run the following script:
+After adapting the necessary paths (where is the data stored) and file names (what are the names of the episdoes you want to work with), you can run the following script:
 
     ./scripts/preprocess.sh
 
@@ -30,7 +28,7 @@ Train a model on the just created data:
     ./scripts/train.sh
 
 
-Generate (sample) some text from a trained model with:
+Generate some text from a trained model with:
 
     ./scripts/generate.sh
 
