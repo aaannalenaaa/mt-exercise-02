@@ -40,7 +40,7 @@ To train several models with different dropout rates, please adjust the dropout 
     ./scripts/batch_train.sh
 
 This will automatically log the different perplexities into individual .csv-files.
-All of them can be combined into one large .csv file using:
+All of them can be combined into one large .csv file. After adjusting the respective directory paths use:
 
     ./scripts/combining_csv.py
 
