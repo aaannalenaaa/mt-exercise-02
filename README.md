@@ -44,6 +44,6 @@ All of them can be combined into one large .csv file using:
 
     ./scripts/combining_csv.py
 
-Further, feel free to plot your results using or check out the exisitng ones:
+Further, feel free to check out the results or plot your own wiht the following jupyter notebook:
 
-    ./mt-exercise-02/scripts/log_plotting.ipynb
+    ./scripts/log_plotting.ipynb
