@@ -24,6 +24,9 @@ After adapting the necessary paths (where is the data stored) and file names (wh
 
     ./scripts/preprocess.sh
 
+If you want to simply work with the previously created data splits. feel free to access it [here](https://github.com/aaannalenaaa/mt-exercise-02/blob/main/test_train_validate_data):
+
+    ./test_train_validate_data
 
 Train a model on the just created data, again adjusting the necessary file paths:
 
