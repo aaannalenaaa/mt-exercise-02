@@ -46,7 +46,7 @@ All of them can be combined into one large .csv file. After adjusting the respec
 
     ./scripts/combining_csv.py
 
-Further, feel free to check out the results or plot your own with the following jupyter notebook:
+Further, feel free to check out the results or plot your own with the following [jupyter notebook](https://github.com/aaannalenaaa/mt-exercise-02/blob/main/scripts/log_plotting.ipynb):
 
     ./scripts/log_plotting.ipynb
 
