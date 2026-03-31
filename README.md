@@ -45,3 +45,4 @@ All of them can be combined into one large .csv file. After adjusting the respec
 Further, feel free to check out the results or plot your own with the following jupyter notebook:
 
     ./scripts/log_plotting.ipynb
+If desired, change the .csv files path in cell 5 line 11.
